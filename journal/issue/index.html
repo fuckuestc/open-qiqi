@@ -1,0 +1,25 @@
+---
+layout: default
+title: 帖子详情
+permalink: /journal/issue/
+description: "阅读单篇 GitHub Issue 的全部内容。"
+---
+<section class="section container issue-detail" data-issue-container>
+  <nav class="breadcrumbs">
+    <a href="{{ '/journal/' | relative_url }}">← 返回所有帖子</a>
+    <span class="breadcrumbs-number" data-issue-number></span>
+  </nav>
+  <header class="issue-header">
+    <p class="issue-meta" data-issue-meta>正在载入元数据…</p>
+    <h1 class="issue-title" data-issue-title>加载标题中…</h1>
+    <div class="issue-labels" data-issue-labels></div>
+  </header>
+  <article class="issue-article" data-issue-body>
+    <div class="loading-card">正在加载帖子内容…</div>
+  </article>
+</section>
+<section class="section container issue-comments" data-issue-comments hidden>
+  <h2 class="section-title">最新评论</h2>
+  <div class="issue-comments-list" data-issue-comments-list></div>
+  <p class="issue-comments-footnote">评论来自 GitHub，仅展示前 10 条。如需查看更多或参与讨论，请前往原始 Issue。</p>
+</section>

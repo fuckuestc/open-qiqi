@@ -1,3 +1,20 @@
+# Site settings
+name: DoubleLuo Digest
+title: DoubleLuo Digest
+description: "汇总 DoubleLuo 仓库 Issues 的苹果风格阅读体验。"
+url: ""
+baseurl: ""
+
+# GitHub source for issues-as-posts
+github_owner: fuckuestc
+github_repo: DoubleLuo
+
+# Build settings
+markdown: kramdown
+timezone: Asia/Shanghai
+permalink: /journal/:title/
+
 plugins:
   - jekyll-sitemap
-destination:  ./docs
+
+destination: ./docs

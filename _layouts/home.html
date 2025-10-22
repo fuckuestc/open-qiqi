@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<section class="hero container">
+  <div class="hero-copy">
+    <p class="eyebrow">DoubleLuo 仓库精选</p>
+    <h1>所有热点 Issue，一处阅读</h1>
+    <p class="intro">自动抓取 GitHub Issues，呈现兼具苹果风格与高信息密度的阅读体验，图文混排、引用附件统统支持。</p>
+    <a class="cta" href="{{ '/journal/' | relative_url }}">浏览全部帖子</a>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ '/assets/images/apple-notes.svg' | relative_url }}" alt="Apple style hero illustration">
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title">最新帖子</h2>
+  <div class="post-grid" data-issues-latest data-limit="3">
+    <div class="loading-card">正在从 GitHub Issues 获取内容…</div>
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title">写作提示</h2>
+  <div class="guidelines">
+    <div>
+      <h3>直接写 Issue</h3>
+      <p>进入 <code>{{ site.github_owner }}/{{ site.github_repo }}</code> 仓库，通过 Issue 发布内容即可自动出现在本站。</p>
+    </div>
+    <div>
+      <h3>图片与图文混排</h3>
+      <p>Issue 正文可使用 Markdown 插入图片、引用或列表，本站会调用 GitHub 的渲染结果保证样式统一。</p>
+    </div>
+    <div>
+      <h3>附件下载</h3>
+      <p>上传到 Issue 的附件或外链会原样展示，读者可以直接点击下载。</p>
+    </div>
+  </div>
+</section>
