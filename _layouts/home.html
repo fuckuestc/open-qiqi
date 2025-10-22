@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<section class="hero container">
+  <div class="hero-copy">
+    <p class="eyebrow">精心打磨的阅读体验</p>
+    <h1>像苹果官网一样优雅的博客</h1>
+    <p class="intro">在这里，使用 Markdown 创作的每篇文章都拥有精致的排版、沉浸式阅读体验，并可无缝插入高清图像与重要附件。</p>
+    <a class="cta" href="{{ '/journal/' | relative_url }}">浏览最新文章</a>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ '/assets/images/apple-notes.svg' | relative_url }}" alt="Apple style hero illustration">
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title">最新文章</h2>
+  <div class="post-grid">
+    {% for post in site.posts limit: 3 %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card-link" style="--card-accent: {{ post.accent_color | default: '#0a84ff' }}">
+          <div class="post-card-header">
+            <span class="post-date">{{ post.date | date: '%Y年%-m月%-d日' }}</span>
+            <h3>{{ post.title }}</h3>
+          </div>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+          <span class="post-cta">阅读全文</span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title">写作提示</h2>
+  <div class="guidelines">
+    <div>
+      <h3>Markdown 驱动</h3>
+      <p>在 <code>_posts</code> 文件夹中添加新的 Markdown 文件即可发布文章，使用标准 Markdown 语法进行排版。</p>
+    </div>
+    <div>
+      <h3>图片与图库</h3>
+      <p>将图片放在 <code>assets/images</code> 下，通过 <code>![]()</code> 语法插入，系统会自动应用苹果风格的圆角阴影。</p>
+    </div>
+    <div>
+      <h3>附件下载</h3>
+      <p>在文章 Front Matter 中使用 <code>attachments</code> 列表，即可展示下载按钮，适用于 PDF、压缩包或 Keynote 文件。</p>
+    </div>
+  </div>
+</section>

@@ -1,3 +1,25 @@
+# Site settings
+name: Apple Inspired Journal
+title: Apple Inspired Journal
+description: "A clean, modern blog experience inspired by Apple's design language."
+url: ""
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+timezone: Asia/Shanghai
+permalink: /journal/:title/
+
 plugins:
   - jekyll-sitemap
-destination:  ./docs
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      hero_image: /assets/images/apple-notes.svg
+      accent_color: "#0a84ff"
+
+destination: ./docs
